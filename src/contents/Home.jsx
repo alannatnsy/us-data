@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { fetchPopulationData } from "../api/dataService";
+import "../contents/css/Data.css";
 
 function Home() {
     const [info, setInfo] = useState({ source_name: "", source_description: "" });
