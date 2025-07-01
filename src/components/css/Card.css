@@ -1,0 +1,9 @@
+.card {
+    border-bottom: 2px solid #4a90e2;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    transition: color 0.3s ease;
+}

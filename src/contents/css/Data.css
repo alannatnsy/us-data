@@ -1,0 +1,27 @@
+.data-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.dropdown {
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+select:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
