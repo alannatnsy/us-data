@@ -1,10 +1,17 @@
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px 20px;
     background-color: #333;
     color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-sizing: border-box;
 }
 
 .navList {
@@ -31,6 +38,6 @@
 }
 
 .active {
-    color: blueviolet;
+    color: white;
     font-weight: bold;
 }
