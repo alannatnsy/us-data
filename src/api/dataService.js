@@ -5,7 +5,7 @@ export const fetchPopulationData = async () => {
       throw new Error('Network response was not ok');
     }
     const result = await response.json();
-    return result.data;
+    return result;
   } catch (error) {
     throw error;
 }
