@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { fetchPopulationData } from "../api/dataService";
 
 function Home() {
     const [info, setInfo] = useState({ source_name: "", source_description: "" });
@@ -8,12 +9,8 @@ function Home() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("https://datausa.io/api/data?drilldowns=Nation&measures=Population");
-                if (!response.ok) {
-                    throw new Error("Network response was not ok");
-                }
-                const result = await response.json();
-                const { source_name, source_description } = result.source[0].annotations;
+                const result = await fetchPopulationData();
+                const { source_name, source_description } = result.source[0].annotations || { source_name: "Unknown", source_description: "No description available" };
                 setInfo({ source_name, source_description });
                 setLoading(false);
             } catch (error) {
@@ -25,11 +22,11 @@ function Home() {
         fetchData();
     }, []);
 
-    if (loading) return <div>Loading...</div>
+    if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error.message}</div>;
 
     return (
-        <div>
+        <div className="home-container">
             <h1>Source Information</h1>
             <div>
                 <p><strong>Organization:</strong></p>
@@ -40,4 +37,5 @@ function Home() {
         </div>
     );
 }
-    export default Home;
+
+export default Home;

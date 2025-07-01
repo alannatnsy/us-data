@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import Card from "../components/Card";
+import { fetchPopulationData } from "../api/dataService";
 import "../contents/css/Data.css";
 
 function Data() {
-    const [data, setData] = useState(null);
+    const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [selectedYear, setSelectedYear] = useState("");
@@ -11,14 +12,10 @@ function Data() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("https://datausa.io/api/data?drilldowns=Nation&measures=Population");
-                if (!response.ok) {
-                    throw new Error("Network response was not ok");
-                }
-                const result = await response.json();
-                setData(result.data);
-                if (result.data.length > 0) {
-                    setSelectedYear(result.data[0].Year)
+                const result = await fetchPopulationData();
+                setData(result.data || []);
+                if ((result.data || []).length > 0) {
+                    setSelectedYear(result.data[0].Year);
                 }
                 setLoading(false);
             } catch (error) {
