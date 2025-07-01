@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './components/Home.jsx';
-import Data from './components/Data.jsx';
-import LineChart from './components/Line.jsx';
-import PieChart from './components/Pie.jsx';
+import Home from './contents/Home.jsx';
+import Data from './contents/Data.jsx';
+import LineChart from './contents/Line.jsx';
+import PieChart from './contents/Pie.jsx';
 import './App.css'
 
 function App() {
