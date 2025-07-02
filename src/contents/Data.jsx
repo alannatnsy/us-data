@@ -35,7 +35,7 @@ function Data() {
 
     return (
         <div className="data-container">
-            <h1>US Population Data</h1>
+            <h1>United States Population Data</h1>
             <div className="mb-4">
                 <label htmlFor="yearSelect" className="mr-2">
                     Select Year :
