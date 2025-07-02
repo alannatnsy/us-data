@@ -1,5 +1,5 @@
 
-# 📊 US Data App
+# 📊 US Population Data App
 
 Aplikasi visualisasi data berbasis React menggunakan Vite dan Chart.js.
 
