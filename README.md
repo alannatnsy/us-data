@@ -18,7 +18,7 @@ git clone https://github.com/alannatnsy/us-data.git
 Masuk ke direktori project:
 
 ```bash
-cd us-data-app
+cd us-data
 ```
 
 ## 🔧 Cara Install dan Menjalankan Project
