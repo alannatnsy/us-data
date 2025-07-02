@@ -58,3 +58,14 @@ select:focus {
 .ml-4 {
   margin-left: 1rem;
 }
+
+.pie-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pie-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 1rem;
+}
